@@ -1,0 +1,7 @@
+{
+  "name": "Style: Raw",
+  "scope": "markup.raw.block",
+  "settings": {
+    "softWrap": false
+  }
+}

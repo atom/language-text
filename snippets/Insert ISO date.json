@@ -1,0 +1,5 @@
+{
+  "content": "`date +%Y-%m-%d`",
+  "name": "Current Date — YYYY-MM-DD",
+  "tabTrigger": "isoD"
+}

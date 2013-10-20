@@ -1,0 +1,7 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "say `echo \"$TM_SELECTED_TEXT\"` &",
+  "input": "selection",
+  "name": "Speak Document / Selection",
+  "output": "discard"
+}

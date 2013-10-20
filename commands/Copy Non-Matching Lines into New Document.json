@@ -1,0 +1,8 @@
+{
+  "beforeRunningCommand": "nop",
+  "bundleUUID": "B7BC3FFD-6E4B-11D9-91AF-000D93589AF6",
+  "command": "res=$(ruby -rui -e\"print TextMate::UI.request_string(:title => 'Filter Non-Matching Lines', :prompt => 'Enter a pattern:', :button1 => 'Filter', :button2 => 'Cancel').to_s\")\n\n[[ -z \"$res\" ]] && exit_discard\nexport pattern=\"$res\"\n\n# This could be done with grep, but Python's RE is closer to oniguruma\n\"${TM_PYTHON:-python}\" -c '\nimport sys, os, re, traceback\ntry:\n  pattern = re.compile(os.environ[\"pattern\"])\nexcept re.error, e:\n  sys.stderr.write(\"Invalid pattern: %s\" % e)\n  sys.exit(1)\nfor line in sys.stdin:\n  if not pattern.search(line):\n    sys.stdout.write(line)\n' || exit_show_tool_tip\n",
+  "input": "selection",
+  "name": "Copy Non-Matching Lines into New Document",
+  "output": "openAsNewDocument"
+}

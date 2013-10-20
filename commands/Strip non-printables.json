@@ -1,0 +1,8 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "perl -pe 's/[^\\t\\n\\x20-\\xFF]|\\x7F|\\xC2[\\x80-\\x9F]//g'",
+  "fallbackInput": "document",
+  "input": "selection",
+  "name": "Remove Unprintable Characters in Document / Selection",
+  "output": "replaceSelectedText"
+}

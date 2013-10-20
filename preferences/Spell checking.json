@@ -1,0 +1,7 @@
+{
+  "name": "Spell Checking: Disable",
+  "scope": "markup.underline.link, markup.raw",
+  "settings": {
+    "spellChecking": "0"
+  }
+}

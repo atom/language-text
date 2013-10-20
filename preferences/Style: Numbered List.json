@@ -1,0 +1,10 @@
+{
+  "name": "Style: Numbered List",
+  "scope": "markup.list.numbered",
+  "settings": {
+    "indentedSoftWrap": {
+      "format": "${0/\\S/ /g}",
+      "match": "\\A\\s*((\\d+\\.|[-*]|#+)\\s+|(?=\\w))"
+    }
+  }
+}

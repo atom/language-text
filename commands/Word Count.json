@@ -1,0 +1,13 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\nrequire 'jcode'\n\nFIGURES      = \"0123456789\"\nFIGURE_SPACE = [0x2007].pack(\"U\")\nTHIN_SPACE   = [0x2009].pack(\"U\")\n\ndef pretty(number)\n  number.to_s.gsub(/\\d{1,3}(?=\\d{3}+(?!\\d))/, '\\0' + THIN_SPACE)\nend\n\ncounts = `wc -lwm`.scan(/\\d+/)\ncounts[0] = counts[0].to_i + 1 # increase one to the line count\n\nfig_cnt = counts.map { |num| pretty(num).jcount(FIGURES) }.max\nspc_cnt = counts.map { |num| pretty(num).jcount(THIN_SPACE) }.max\n\n%w[ line word character ].each do |unit|\n  cnt    = pretty(counts.shift)\n  prefix = FIGURE_SPACE * (fig_cnt - cnt.jcount(FIGURES)) + THIN_SPACE * (spc_cnt - cnt.jcount(THIN_SPACE))\n  plural = cnt.to_i != 1 ? 's' : ''\n  printf(\" %s%s %s%s\\n\", prefix, cnt, unit, plural)\nend\n",
+  "fallbackInput": "document",
+  "input": "selection",
+  "inputFormat": "text",
+  "keyEquivalent": "^N",
+  "name": "Statistics for Document / Selection (Word Count)",
+  "outputCaret": "afterOutput",
+  "outputFormat": "text",
+  "outputLocation": "toolTip",
+  "version": 2
+}

@@ -1,0 +1,9 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\n\n# If there’s a selection, output that twice (as a snippet)\n# leaving the duplicate as the new selected text.\n# Otherwise split the current line around the caret and\n# output “right, left” to duplicate the line, leaving the\n# caret in the same place on the new line\n\nrequire File.join(ENV[\"TM_SUPPORT_PATH\"], \"lib/exit_codes.rb\")\nrequire File.join(ENV[\"TM_SUPPORT_PATH\"], \"lib/escape.rb\")\n\nif ENV['TM_SELECTED_TEXT'] != nil\n\tTextMate.exit_insert_snippet(e_sn(ENV['TM_SELECTED_TEXT']) + \"${0:\" + e_snp(ENV['TM_SELECTED_TEXT']) + \"}\")\nelse\n\tcol   = ENV['TM_LINE_INDEX'].to_i\n\tTextMate.exit_insert_text(ENV['TM_CURRENT_LINE'][col..-1] + \"\\n\" + ENV['TM_CURRENT_LINE'][0...col])\nend",
+  "fallbackInput": "none",
+  "input": "selection",
+  "keyEquivalent": "^D",
+  "name": "Duplicate Line / Selection",
+  "output": "afterSelectedText"
+}

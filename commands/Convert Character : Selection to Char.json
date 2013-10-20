@@ -1,0 +1,12 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\nprint STDIN.read.split(\" \").map { |e| [e.sub(/^0x/,\"\").hex].pack(\"U*\") }.join",
+  "input": "selection",
+  "inputFormat": "text",
+  "keyEquivalent": "^X",
+  "name": "Convert Hex / Selection to Character",
+  "outputCaret": "heuristic",
+  "outputFormat": "text",
+  "outputLocation": "replaceInput",
+  "version": 2
+}
