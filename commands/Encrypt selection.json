@@ -1,9 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "get_pw () {\n  ruby -rui -e\"print TextMate::UI.request_secure_string(:title => 'Encrypt Text With AES 128', :prompt => '$1', :button1 => '$2', :button2 => 'Cancel').to_s\"\n}\npw1=$(get_pw 'What password should be used?'   Continue)\n[[ -z \"$pw1\" ]] && exit_discard\npw2=$(get_pw 'Enter password again to verify.' Encrypt)\n\nif [[ \"$pw1\" == \"$pw2\" ]];\n  then openssl enc -e -aes128 -base64 -pass \"pass:$pw1\"\n  else exit_show_tool_tip 'Password mismatch! Please play again.'\nfi\n",
-  "fallbackInput": "document",
-  "input": "selection",
-  "keyEquivalent": "^@E",
-  "name": "AES Encrypt Document / Selection With Password…",
-  "output": "replaceSelectedText"
-}

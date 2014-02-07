@@ -1,8 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "perl -pe 's/[\\t ]+$//g'",
-  "fallbackInput": "document",
-  "input": "selection",
-  "name": "Remove Trailing Spaces in Document / Selection",
-  "output": "replaceSelectedText"
-}

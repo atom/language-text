@@ -1,5 +1,0 @@
-{
-  "command": "if [[ ! -f \"$TM_NEW_FILE\" ]]; then\n   __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 \\\n   pbpaste > \"$TM_NEW_FILE\" | tr '\\r' '\\n'\nfi",
-  "extension": "txt",
-  "name": "From Clipboard"
-}

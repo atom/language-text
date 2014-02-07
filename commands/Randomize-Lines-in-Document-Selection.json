@@ -1,7 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -pe'$_ = (rand * 100000000).round.to_s + \"\\t\" + $_'|sort|cut -f2-",
-  "input": "selection",
-  "name": "Randomize Lines in Document / Selection",
-  "output": "replaceSelectedText"
-}

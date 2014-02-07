@@ -1,9 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\nprint STDIN.read.unpack(\"U*\").map { |e| sprintf('0x%02x', e) }.join(' ')",
-  "fallbackInput": "character",
-  "input": "selection",
-  "keyEquivalent": "^X",
-  "name": "Convert Character / Selection to Hex",
-  "output": "replaceSelectedText"
-}

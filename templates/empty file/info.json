@@ -1,5 +1,0 @@
-{
-  "command": "touch \"$TM_NEW_FILE\"",
-  "isDefault": "1",
-  "name": "Empty File"
-}

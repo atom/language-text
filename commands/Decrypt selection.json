@@ -1,9 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "get_pw () {\n  ruby -rui -e\"print TextMate::UI.request_secure_string(:title => 'Decrypt AES 128 Encrypted Text', :prompt => '$1', :button1 => '$2', :button2 => 'Cancel').to_s\"\n}\n\npw=$(get_pw 'What is the password?' Decrypt)\n[[ -z \"$pw\" ]] && exit_discard\n\nif ! openssl enc -d -aes128 -base64 -pass \"pass:$pw\"; then\n   exit_show_tool_tip\nfi\n",
-  "fallbackInput": "document",
-  "input": "selection",
-  "keyEquivalent": "^@E",
-  "name": "AES Decrypt Document / Selection With Password…",
-  "output": "replaceSelectedText"
-}

@@ -1,8 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "iconv -c -f utf-8 -t ASCII//TRANSLIT",
-  "fallbackInput": "word",
-  "input": "selection",
-  "name": "Transliterate Word / Selection to ASCII",
-  "output": "replaceSelectedText"
-}
