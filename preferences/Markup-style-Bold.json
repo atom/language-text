@@ -1,7 +1,0 @@
-{
-  "name": "Style: Bold",
-  "scope": "markup.bold",
-  "settings": {
-    "bold": "1"
-  }
-}

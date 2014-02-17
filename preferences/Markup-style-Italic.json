@@ -1,7 +1,0 @@
-{
-  "name": "Style: Italic",
-  "scope": "markup.italic",
-  "settings": {
-    "italic": "1"
-  }
-}

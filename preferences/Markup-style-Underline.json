@@ -1,7 +1,0 @@
-{
-  "name": "Style: Underline",
-  "scope": "markup.underline",
-  "settings": {
-    "underline": "1"
-  }
-}
