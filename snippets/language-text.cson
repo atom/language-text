@@ -1,4 +1,4 @@
-'*':
+'.source.gfm, .comment, .string, .text':
   'Copyright Notice':
     'prefix': 'legal'
     'body': 'Copyright (c) ${1:2015} ${2:Copyright Holder} ${3:All Rights Reserved.}$4'
