@@ -2,7 +2,7 @@
 
 Grammar and snippets for plain text files in Atom.
 
-Originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
+Originally [converted](http://flight-manual.atom.io/hacking-atom/sections/converting-from-textmate)
 from the [Text TextMate bundle](https://github.com/textmate/text.tmbundle).
 
 Contributions are greatly appreciated. Please fork this repository and open a
