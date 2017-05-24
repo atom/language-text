@@ -1,6 +1,6 @@
 {
   "name": "language-text",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Plain text support in Atom",
   "engines": {
     "atom": "*",
